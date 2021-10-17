@@ -30,7 +30,7 @@ import ResponsiveDrawer from './../drawer';
 export default function Header() {
   return (
         <AppBar>
-        <Toolbar px={5} py={10} style={{minHeight:200}}>
+        <Toolbar px={5} py={10} style={{minHeight:150}}>
         <Grid container direction="row" justifyContent="space-between" alignItems="center"> 
         <Grid item>
             <Stack direction="row" spacing={1} ml={10} justifyContent="center" alignItems="center"> 
@@ -50,8 +50,8 @@ export default function Header() {
         <Grid item>
           <Stack direction="row" mr={10} spacing={6} justifyContent="center" alignItems="center"> 
             <ProfilePic src={flag} sx={{ width: 43, height: 23 }} variant="square"/>
-            <StyledBadge label={50} component={<NotificationsIcon/>}/>
             <StyledBadge label={50} component={<EmailIcon/>}/>
+            <StyledBadge label={51} max={50} component={<NotificationsIcon/>}/>
             <SearchBar/>
             <ProfilePic src={logo} sx={{ width: 70, height: 30 }} variant="square"/>
           </Stack>

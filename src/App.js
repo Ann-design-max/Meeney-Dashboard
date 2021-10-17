@@ -13,6 +13,8 @@ import Zoom from '@mui/material/Zoom';
 import Header from './components/header/header';
 import Grid from '@mui/material/Grid';
 import './App.scss';
+import LeftStack from './containers/left';
+import CenterStack from './containers/center';
 
 
 function ScrollTop(props) {
@@ -67,29 +69,15 @@ export default function App(props) {
        <React.Fragment>
       <CssBaseline />
       <Header/>
-      <Toolbar id="back-to-top-anchor" sx={{ my: 5, py:5 }} />
+      <Toolbar id="back-to-top-anchor" />
      
-        <Box sx={{ mt: 10, mx:15, pt:10 }}>
+        <Box sx={{ mt: 10, mx:10, pt:5 }}>
         <Grid container spacing={5} direction="row" justifyContent="space-between" alignItems="flex-start"> 
           <Grid item xs={2} sx={{display: { sm: 'none', lg: 'block' } }}>
-          {[...new Array(12)]
-            .map(
-              () => `first Cras mattis consectetur purus sit amet fermentum.
-Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
-            )
-            .join('\n')}
+          <LeftStack/>
           </Grid>
           <Grid item xs={12} md={7}>
-          {[...new Array(12)]
-            .map(
-              () => `second Cras mattis consectetur purus sit amet fermentum.
-Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
-            )
-            .join('\n')}
+          <CenterStack/>
           </Grid>
 
           <Grid item xs={12} md ={3}>

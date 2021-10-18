@@ -3,8 +3,8 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
-import ProfilePic from './../avatar';
-import single from '../../assests/single.png'
+import ProfilePic from '../../avatar';
+import single from '../../../assests/single.png'
 import IconButton from '@mui/material/IconButton';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import PushPinIcon from '@mui/icons-material/PushPin';

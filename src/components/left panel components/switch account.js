@@ -3,9 +3,9 @@ import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import { Paper, Typography } from '@mui/material';
 import Stack from '@mui/material/Stack';
-import StyledBadge from './badge';
+import StyledBadge from '../badge';
 
-export default function SwitchAccount() {
+export default function SwitchAccount(props) {
   const [alignment, setAlignment] = React.useState('social');
 
   const handleChange = (event, newAlignment) => {
@@ -19,7 +19,6 @@ export default function SwitchAccount() {
               <Typography color='primary' variant='h6'>Switch Account</Typography>
                 <ToggleButtonGroup
                 color="primary"
-               
                 value={alignment}
                 exclusive
                 onChange={handleChange}

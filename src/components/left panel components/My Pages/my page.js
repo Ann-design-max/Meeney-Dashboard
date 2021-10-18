@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import ControlPointIcon from '@mui/icons-material/ControlPoint';
 import Chip from '@mui/material/Chip';
-import SearchBar from '../search';
+import SearchBar from '../../search';
 import Container  from '@mui/material/Container';
 import SinglePage from './single page';
 

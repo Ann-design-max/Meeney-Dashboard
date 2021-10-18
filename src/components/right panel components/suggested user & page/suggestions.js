@@ -6,9 +6,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import UserCard from '../components/center panel components/user card/user card';
-import PostCard from '../components/center panel components/postcard';
-import Post from '../components/center panel components/Post/posts';
+import SuggestedList from './suggested pages';
 
 
 
@@ -48,7 +46,7 @@ function a11yProps(index) {
 
 
 
-export default function CenterStack() {
+export default function Suggestions() {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -58,28 +56,16 @@ export default function CenterStack() {
   return (
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" centered variant='fullWidth'>
-          <Tab label="Community" {...a11yProps(0)} />
-          <Tab label="See What's Trending" {...a11yProps(1)} />
-          <Tab label="My page" {...a11yProps(2)} />
+        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" centered >
+          <Tab label="Suggested Users" {...a11yProps(0)} />
+          <Tab label="Suggested Pages" {...a11yProps(1)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-      Community
+      Suggested Users
       </TabPanel>
       <TabPanel value={value} index={1}>
-      See What's Trending
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-      <Stack spacing={3}>
-        <UserCard/>
-        <PostCard/>
-       <Post/>
-       <Post/>
-       <Post/>
-       <Post/>
-       <Post/>
-      </Stack>
+        <SuggestedList/>
       </TabPanel>
     </Box>
   );

@@ -15,6 +15,7 @@ import Grid from '@mui/material/Grid';
 import './App.scss';
 import LeftStack from './containers/left';
 import CenterStack from './containers/center';
+import RightStack from './containers/right';
 
 
 function ScrollTop(props) {
@@ -72,25 +73,13 @@ export default function App(props) {
       <Toolbar id="back-to-top-anchor" />
      
         <Box sx={{ mt: 10, mx:10, pt:5 }}>
-        <Grid container spacing={5} direction="row" justifyContent="space-between" alignItems="flex-start"> 
-          <Grid item xs={2} sx={{display: { sm: 'none', lg: 'block' } }}>
-          <LeftStack/>
-          </Grid>
-          <Grid item xs={12} md={7}>
-          <CenterStack/>
-          </Grid>
+          <Grid container spacing={5} direction="row" justifyContent="space-between" alignItems="flex-start"> 
+            <Grid item xs={2} sx={{display: { sm: 'none', lg: 'block' } }}><LeftStack/></Grid>
 
-          <Grid item xs={12} md ={3}>
-          {[...new Array(12)]
-            .map(
-              () => `thrid Cras mattis consectetur purus sit amet fermentum.
-Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
-            )
-            .join('\n')}
+            <Grid item xs={12} md={7}><CenterStack/></Grid>
+
+            <Grid item xs={12} md ={3}><RightStack/></Grid>
           </Grid>
-        </Grid>
         </Box>
     
       <ScrollTop {...props}>

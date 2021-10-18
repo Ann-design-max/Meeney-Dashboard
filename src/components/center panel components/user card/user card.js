@@ -3,13 +3,13 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import user from '../../assests/user card.png'
-import ProfilePic from '../avatar';
+import user from '../../../assests/user card.png'
+import ProfilePic from '../../avatar';
 import { Paper, Stack} from '@mui/material';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import CardHeader from '@mui/material/CardHeader';
 import Metric from './metric';
-import RoundButton from './../button';
+import RoundButton from './../../button';
 
 export default function UserCard(props) {
 

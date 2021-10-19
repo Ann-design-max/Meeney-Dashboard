@@ -45,10 +45,10 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function SearchBar() {
+export default function SearchBar(props) {
   return (
       <div>
-        <Search>
+        <Search sx={props.sx}>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>

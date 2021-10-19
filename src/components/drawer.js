@@ -51,7 +51,7 @@ export default function ResponsiveDrawer() {
       {['left'].map((anchor) => (
         <React.Fragment key={anchor}>
           {/* <Button color='secondary' onClick={toggleDrawer(anchor, true)} sx={{ mr: 2, display: { sm: 'none' } }}>{anchor}</Button> */}
-          <IconButton size='small' edge="end" color='secondary' onClick={toggleDrawer(anchor, true)} sx={{ mr: 2, ml:-2, display: { sm: 'none' } }}><MenuIcon/></IconButton>
+          <IconButton size='small' edge="end" color='secondary' onClick={toggleDrawer(anchor, true)} sx={{ mr:[ 7,2,2,2], ml:-1, display: { sm: 'none' } }}><MenuIcon/></IconButton>
           <Drawer
             anchor={anchor}
             open={state[anchor]}

@@ -83,6 +83,27 @@ export const Theme = createTheme({
     [theme.breakpoints.up('md')]: {
     fontSize: '0.8rem',
     },
+},
+subtitle1:{
+  fontSize: '0.6rem',
+  fontWeight:'500',
+  '@media (min-width:600px)': {
+  fontSize: '0.6rem',
+  },
+  [theme.breakpoints.up('md')]: {
+  fontSize: '0.7rem',
+  },
+},
+
+subtitle2:{
+  fontSize: '0.5rem',
+  fontWeight:'500',
+  '@media (min-width:600px)': {
+  fontSize: '0.5rem',
+  },
+  [theme.breakpoints.up('md')]: {
+  fontSize: '0.6rem',
+  },
 }
       },
 

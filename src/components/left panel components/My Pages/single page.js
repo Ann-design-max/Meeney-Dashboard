@@ -9,26 +9,26 @@ import IconButton from '@mui/material/IconButton';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import PushPinIcon from '@mui/icons-material/PushPin';
 import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
+import { Paper } from '@mui/material';
 
 export default function SinglePage(props) {
   return (
-    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.default' }}>
-      <ListItem secondaryAction={
-                    <Stack direction="column" justifyContent="space-around" alignItems="center">
-                         <IconButton size='small' edge="end" aria-label="delete">
-                      <MoreHorizIcon />
-                    </IconButton>
-                    <IconButton size='small' edge="end" aria-label="delete">
-                    <PushPinIcon/>
-                  </IconButton>
-                    </Stack>
-                   
-                  }>
-        <ListItemAvatar>
-         <ProfilePic src={single} sx={{ width: 40, height: 40}} />
-        </ListItemAvatar>
-        <ListItemText primary={props.primary} secondary={props.secondary} />
-      </ListItem>
-    </List>
+    <Paper elevation={0} sx={{bgcolor: 'background.default', px:1, width:'100%'}}>
+    <Stack direction="row" spacing={2} justifyContent='space-around' alignItems='center'>
+      <Stack direction="row" spacing={1} justifyContent='space-around' alignItems='center'>
+        <ProfilePic src={single} sx={{ width: 35, height: 35, mt:1}}/>
+        <Stack spacing={0} justifyContent='center' alignItems='flex-start'>
+          <Typography component="div" variant="subtitle1" >{props.primary}</Typography>
+            <Typography variant="subtitle2" color="text.secondary" component="div">{props.secondary}</Typography>
+        </Stack>
+      </Stack>
+
+      <Stack direction="column"  justifyContent="space-around" alignItems="center">
+        <IconButton size='small' edge="end" aria-label="delete" color='primary'><MoreHorizIcon /></IconButton>
+        <IconButton size='small' edge="end" aria-label="delete" color='primary'><PushPinIcon/></IconButton>
+      </Stack>
+    </Stack>
+    </Paper>
   );
 }

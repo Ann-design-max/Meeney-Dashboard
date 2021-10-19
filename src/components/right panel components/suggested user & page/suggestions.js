@@ -7,6 +7,7 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import SuggestedList from './suggested pages';
+import NavMenu from '../../left panel components/nav menu';
 
 
 
@@ -62,7 +63,7 @@ export default function Suggestions() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-      Suggested Users
+      Suggest Users
       </TabPanel>
       <TabPanel value={value} index={1}>
         <SuggestedList/>

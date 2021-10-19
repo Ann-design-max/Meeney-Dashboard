@@ -34,10 +34,10 @@ export default function Post(props) {
         }
       />
        <Grid container spacing={3}>
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             <ProfilePic src={Postpic} sx={{ width: 350, height: 380}} variant='rounded'/>
           </Grid>
-          <Grid item xs={6}> 
+          <Grid item xs={12}md={6}> 
             <Stack direction="row" spacing={3} justifyContent='flex-start' alignItems='center'>
                 <ProfilePic src={profile} sx={{ width: 40, height: 40}}/>
                 <Stack spacing={0} justifyContent='center' alignItems='flex-start'>

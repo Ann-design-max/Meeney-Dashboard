@@ -16,40 +16,36 @@ import Grid from '@mui/material/Grid';
 import ResponsiveDrawer from './../drawer';
 
 
-
-
-// const StyledToolbar = styled(Toolbar)(({ theme }) => ({
-//   alignItems: 'center',
-//   padding: 50,
-//   // Override media queries injected by theme.mixins.toolbar
-//   '@media all': {
-//     minHeight: 128,
-//   },
-// }));
-
 export default function Header() {
   return (
         <AppBar>
         <Toolbar px={5} py={10} style={{minHeight:150}}>
-        <Grid container direction="row" justifyContent="space-between" alignItems="center"> 
+        <Grid container direction="row" spacing={3} justifyContent="space-between" alignItems="center"> 
         <Grid item>
-            <Stack direction="row" spacing={1} ml={10} justifyContent="center" alignItems="center"> 
-             <ResponsiveDrawer/>
-              <ProfilePic src={top} sx={{ width: 56, height: 56 }} />
-              <KeyboardArrowDownIcon color="secondary"/>
-                <Typography
-                  variant="h6"
-                  noWrap
-                  component="div"
-                  sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-                >
-                Jonathan Deo
-                </Typography>
-            </Stack>
+            <Grid container direction="row" spacing={1} sx={{ marginLeft:[2, 3, 1] }} justifyContent="space-between" alignItems="center"> 
+                <Grid item>
+                  <ResponsiveDrawer/>
+                </Grid>
+                
+               <Grid item  sx={{ display: { xs: 'none', sm: 'block' } }} > 
+                  <Grid container direction="row" sx={{ marginLeft:[8,1,1] }} spacing={1} justifyContent="flex-end" alignItems="center"> 
+                      <ProfilePic src={top} sx={{ width: 56, height: 56 }} />
+                      <KeyboardArrowDownIcon color="secondary"/>
+                        <Typography
+                          variant="h6"
+                          noWrap
+                          component="div"
+                          sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                        >
+                        Jonathan Deo
+                        </Typography>
+                  </Grid>
+                </Grid>
+            </Grid>
         </Grid>
         <Grid item>
-          <Stack direction="row" mr={10} spacing={6} justifyContent="center" alignItems="center"> 
-            <ProfilePic src={flag} sx={{ width: 43, height: 23 }} variant="square"/>
+          <Stack direction="row" sx={{ marginRight:[2, 5, 7] }}spacing={3} justifyContent="space-between" alignItems="center"> 
+            <ProfilePic src={flag} sx={{ width: 43, height: 23, marginLeft:[2, null]}} variant="square"/>
             <StyledBadge label={50} component={<EmailIcon/>}/>
             <StyledBadge label={51} max={50} component={<NotificationsIcon/>}/>
             <SearchBar/>

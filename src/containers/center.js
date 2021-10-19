@@ -57,7 +57,7 @@ export default function CenterStack() {
 
   return (
     <Box sx={{ width: '100%' }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+      <Box sx={{ borderBottom: 1,  width: '100%', borderColor: 'divider' }}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" centered variant='fullWidth'>
           <Tab label="Community" {...a11yProps(0)} />
           <Tab label="See What's Trending" {...a11yProps(1)} />

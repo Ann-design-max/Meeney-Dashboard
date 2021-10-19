@@ -105,7 +105,7 @@ subtitle2:{
   fontSize: '0.6rem',
   },
 }
-      },
+},
 
   palette: {
     background:{

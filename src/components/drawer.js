@@ -1,15 +1,14 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
-import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import LeftStack from '../containers/left';
+import MenuIcon from '@mui/icons-material/Menu';
+import IconButton from '@mui/material/IconButton';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import Grid from '@mui/material/Grid';
+import top from "../assests/top pic.png"
+import ProfilePic from '../components/avatar';
+import Typography from '@mui/material/Typography';
 
 export default function ResponsiveDrawer() {
   const [state, setState] = React.useState({
@@ -26,11 +25,23 @@ export default function ResponsiveDrawer() {
 
   const list = (anchor) => (
     <Box
-      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 , background:'#F3f3f3'}}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
+      <Grid container direction="row"spacing={1} ml={3} mt={5} justifyContent="flex-start" alignItems="center"> 
+       <ProfilePic src={top} sx={{ width: 56, height: 56 }} />
+       <KeyboardArrowDownIcon color="secondary"/>
+         <Typography
+           variant="h6"
+           noWrap
+           component="div"
+           sx={{ flexGrow: 1 }}
+         >
+         Jonathan Deo
+         </Typography>
+      </Grid>
       <LeftStack/>
     </Box>
   );
@@ -39,7 +50,8 @@ export default function ResponsiveDrawer() {
     <div>
       {['left'].map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button color='secondary' onClick={toggleDrawer(anchor, true)} sx={{ mr: 2, display: { sm: 'none' } }}>{anchor}</Button>
+          {/* <Button color='secondary' onClick={toggleDrawer(anchor, true)} sx={{ mr: 2, display: { sm: 'none' } }}>{anchor}</Button> */}
+          <IconButton size='small' edge="end" color='secondary' onClick={toggleDrawer(anchor, true)} sx={{ mr: 2, ml:-2, display: { sm: 'none' } }}><MenuIcon/></IconButton>
           <Drawer
             anchor={anchor}
             open={state[anchor]}

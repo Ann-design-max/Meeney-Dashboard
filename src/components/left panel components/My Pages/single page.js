@@ -19,7 +19,7 @@ export default function SinglePage(props) {
       <Stack direction="row" spacing={1} justifyContent='space-around' alignItems='center'>
         <ProfilePic src={single} sx={{ width: 35, height: 35, mt:1}}/>
         <Stack spacing={0} justifyContent='center' alignItems='flex-start'>
-          <Typography component="div" variant="subtitle1" >{props.primary}</Typography>
+          <Typography component="div" variant="subtitle1" color='primary' >{props.primary}</Typography>
             <Typography variant="subtitle2" color="text.secondary" component="div">{props.secondary}</Typography>
         </Stack>
       </Stack>

@@ -16,7 +16,7 @@ export default function UserCard(props) {
   return (
     <Paper elevation={0} py={3} sx={{bgcolor: 'primary.lighter',borderRadius: 5}}>
     <Card sx={{ display: 'flex', bgcolor: 'primary.lighter', borderRadius: 5, pt:0}} elevation={0} >
-    <Stack direction="row" spacing={2} justifyContent='center' alignItems='center'>
+    <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} justifyContent='center' alignItems='center'>
       <CardContent sx={{ pl: 5, py:3}}>
         <ProfilePic src={user} sx={{ width: 120, height: 120 }} />
       </CardContent>

@@ -72,13 +72,13 @@ export default function App(props) {
       <Header/>
       <Toolbar id="back-to-top-anchor" />
      
-        <Box sx={{ mt: 10, mx:10, pt:5 }}>
+        <Box sx={{ mt: 10, mx:[3,7,10], pt:5 }}>
           <Grid container spacing={5} direction="row" justifyContent="space-between" alignItems="flex-start"> 
-            <Grid item xs={2} sx={{display: { sm: 'none', lg: 'block' } }}><LeftStack/></Grid>
+            <Grid item xs={2} sx={{display: { xs: 'none', lg: 'block' } }}><LeftStack/></Grid>
 
-            <Grid item xs={12} md={7}><CenterStack/></Grid>
+            <Grid item xs={12} sm={12} md={7}><CenterStack/></Grid>
 
-            <Grid item xs={12} md ={3}><RightStack/></Grid>
+            <Grid item xs={12} sm={12} md ={3}><RightStack/></Grid>
           </Grid>
         </Box>
     
